@@ -3,7 +3,10 @@ import styled from "styled-components";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import { ContentWithPaddingXl, Container } from "components/misc/Layouts.js";
-import { SectionHeading as Heading, Subheading as SubheadingBase } from "components/misc/Headings.js";
+import {
+  SectionHeading as Heading,
+  Subheading as SubheadingBase,
+} from "components/misc/Headings.js";
 import { ReactComponent as SvgDecoratorBlob1 } from "images/svg-decorator-blob-7.svg";
 import { ReactComponent as SvgDecoratorBlob2 } from "images/svg-decorator-blob-8.svg";
 
@@ -30,24 +33,24 @@ export default ({
       imageSrc:
         "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3.25&w=512&h=512&q=80",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Charlotte Hale"
+        "As a college student, my budget's tight and routine sets in quick. Dinetimz has been a lifesaver! It breaks the boring meal cycle and makes even a random Tuesday lunch feel like an adventure. I've rediscovered the excitement of eating!",
+      customerName: "Aman Parmar",
     },
     {
       imageSrc:
         "https://images.unsplash.com/photo-1531427186611-ecfd6d936c79?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=512&h=512&q=80",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Adam Cuppy"
+        "Let's be real, after a long workday, the last thing I want is to decide what to eat. Dinetimz takes that mental load off. I trust them to bring variety and deliciousness to my week. It's the best kind of surprise after a hectic day",
+      customerName: "Manoj Singh",
     },
     {
       imageSrc:
         "https://images.unsplash.com/photo-1580852300654-03c803a14e24?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=4.25&w=512&h=512&q=80",
       quote:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
-      customerName: "Steven Marcetti"
-    }
-  ]
+        "I love that Dinetimz caters to my changing moods. Sometimes I want comfort food, sometimes something exotic. Their selection feels limitless! It's inspired me to be bolder with my food choices and made dining out a journey rather than just a meal.",
+      customerName: "Uzair Khan",
+    },
+  ],
 }) => {
   return (
     <Container>

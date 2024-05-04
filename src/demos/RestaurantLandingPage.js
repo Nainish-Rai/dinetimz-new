@@ -17,6 +17,9 @@ import shopIconImageSrc from "images/shop-icon.svg";
 import BackgroundAsImageWithCenteredContent from "components/hero/BackgroundAsImageWithCenteredContent";
 import Vision from "components/custom/Vision";
 import { HeroParallax } from "components/custom/HeroParallax";
+import { HeroParallaxDemo } from "components/custom/HeroParallaxContainer";
+import { WavyBackground } from "components/custom/WavyBackground";
+import { TypewriterEffect } from "components/custom/TypeWriter";
 
 export default () => {
   const Subheading = tw.span`tracking-wider text-sm font-medium`;
@@ -26,7 +29,7 @@ export default () => {
   const imageCss = tw`rounded-4xl`;
   return (
     <AnimationRevealPage>
-      {/* <Hero
+      <Hero
         heading={
           <>
             Discover Dine Decide <HighlightedText>DineTimz</HighlightedText>
@@ -38,8 +41,8 @@ export default () => {
         imageDecoratorBlob={true}
         primaryButtonText="Subscribe Us"
         watchVideoButtonText="Explore"
-      /> */}
-      <HeroParallax />
+      />
+
       <br />
       <br />
 
@@ -151,27 +154,23 @@ export default () => {
         imageCss={tw`w-20! h-20!`}
       /> */}
 
-      <MainFeature2
+      <MainFeature
         subheading={<Subheading>A Reputed Brand</Subheading>}
         heading={
           <>
-            Why <HighlightedText>Choose Us ?</HighlightedText>
+            The Vision <HighlightedText>We Dream</HighlightedText>
           </>
         }
-        statistics={[
-          {
-            key: "Orders",
-            value: "94000+",
-          },
-          {
-            key: "Customers",
-            value: "11000+",
-          },
-          {
-            key: "Chefs",
-            value: "1500+",
-          },
-        ]}
+        description={
+          <Description>
+            At Dinetimz, we dream of a world where every meal feels like a new
+            adventure. We want to break the routine of eating the same thing
+            every day. Our goal is to bring people together through diverse and
+            exciting flavors, making dining a fun and memorable experience for
+            everyone. Imagine a future where every bite is a discovery, and
+            variety is the spice of life!"
+          </Description>
+        }
         primaryButtonText="Order Now"
         primaryButtonUrl="https://order.now.com"
         imageInsideDiv={false}
@@ -193,8 +192,8 @@ export default () => {
       <DownloadApp
         text={
           <>
-            People around you are ordering delicious meals using the{" "}
-            <HighlightedTextInverse>Treact App.</HighlightedTextInverse>
+            Donwload the App and Connect with us on Whatsapp{" "}
+            <HighlightedTextInverse>DineTimz App.</HighlightedTextInverse>
           </>
         }
       />
