@@ -2,6 +2,7 @@ module.exports = {
   prefix: "",
   important: false,
   separator: ":",
+
   theme: {
     screens: {
       sm: "640px",
@@ -778,4 +779,9 @@ module.exports = {
   },
   corePlugins: {},
   plugins: [],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
+  ],
 };

@@ -1,8 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
 import { css } from "styled-components/macro"; //eslint-disable-line
-import { SectionHeading, Subheading as SubheadingBase } from "components/misc/Headings.js";
+import {
+  SectionHeading,
+  Subheading as SubheadingBase,
+} from "components/misc/Headings.js";
 import { SectionDescription } from "components/misc/Typography.js";
 import { PrimaryButton as PrimaryButtonBase } from "components/misc/Buttons.js";
 import { Container, ContentWithPaddingXl } from "components/misc/Layouts.js";
@@ -17,14 +20,14 @@ const Description = tw(SectionDescription)`w-full text-center`;
 const PlanDurationSwitcher = tw.div`block w-full max-w-xs sm:inline-block sm:w-auto border-2 rounded-full px-1 py-1 mt-8`;
 const SwitchButton = styled.button`
   ${tw`w-1/2 sm:w-32 px-4 sm:px-8 py-3 rounded-full focus:outline-none text-sm font-bold text-gray-700 transition duration-300`}
-  ${props => props.active && tw`bg-primary-500 text-gray-100`}
+  ${(props) => props.active && tw`bg-primary-500 text-gray-100`}
 `;
 
 const PlansContainer = tw.div`flex justify-center flex-col md:flex-row items-center md:items-start relative`;
 const Plan = styled.div`
   ${tw`w-full max-w-72 mt-16 md:mr-12 md:last:mr-0 text-center px-8 rounded-lg relative text-gray-900 bg-white flex flex-col shadow-raised`}
 
-  ${props =>
+  ${(props) =>
     props.featured &&
     css`
       ${tw`border-2 border-gray-200 shadow-none`}
@@ -76,29 +79,54 @@ export default ({
   primaryButtonText = "Buy Now",
   planDurations = [
     {
-      text: "Month",
-      switcherText: "Monthly",
+      text: "15 Days",
+      switcherText: "Our Plans",
     },
     {
-      text: "Year",
-      switcherText: "Yearly",
-    }
-  ]
+      text: "30 Days",
+      switcherText: "Our Plans",
+    },
+    {
+      text: "30 Days",
+      switcherText: "Our Plans",
+    },
+  ],
 }) => {
   const defaultPlans = [
     {
-      name: "Free Plan",
-      durationPrices: ["$0", "$0"],
-      mainFeature: "For Personal Blogs",
-      features: ["30 Templates", "7 Landing Pages", "12 Internal Pages", "Basic Assistance"]
+      name: "Single Plan",
+      durationPrices: ["₹950", "₹1500 + GST"],
+      mainFeature:
+        "Need a shorter dining solution? Try our 15-day single dining plan. Enjoy the convenience of rotating between up to 3 messes for 5 days each, ensuring a diverse and enjoyable dining experience.For Personal Blogs",
+      features: [
+        "Total Dining Days: 15 days",
+        "Mess Selection: Up to 3 messes for 5 days each",
+        "Benefits: Flexibility for shorter durations without compromising on choice.",
+      ],
     },
     {
-      name: "Pro Plan",
-      durationPrices: ["$49", "$499"],
-      mainFeature: "Suited for Production Websites",
-      features: ["60 Templates", "8 Landing Pages", "22 Internal Pages", "Priority Assistance", "Lifetime Updates"],
-      featured: true
-    }
+      name: "Combo Plan",
+      durationPrices: ["₹2800", "$499"],
+      mainFeature:
+        "Get the best of both worlds with our 30-day combo plan, offering lunch and dinner options. Choose from 3 messes for lunch and 3 messes for dinner, rotating between them for 10 days each. Enjoy a diverse and satisfying dining experience throughout the month",
+      features: [
+        "Total Dining Days: 30 days",
+        "Mess Selection: Up to 3 messes for lunch and 3 messes for dinner for 10 days each",
+        "Benefits: Convenience of having both lunch and dinner options covered, with a wide selection of messes to choose from",
+      ],
+      featured: true,
+    },
+    {
+      name: "Single Plan",
+      durationPrices: ["₹1500", "₹1500 + GST"],
+      mainFeature:
+        "Enjoy a full month of delicious dining with our 30-day single dining plan. Choose from a selection of messes for lunch and dinner, with the flexibility to rotate between up to 3 messes for 10 days eachNeed a shorter dining solution? Try our 15-day single dining plan. Enjoy the convenience of rotating between up to 3 messes for 5 days each, ensuring a diverse and enjoyable dining experience.For Personal Blogs",
+      features: [
+        "Total Dining Days: 30 days",
+        "Mess Selection: Up to 3 messes for 10 days each",
+        "Benefits: Variety, flexibility, and affordability for a satisfying dining experience.",
+      ],
+    },
   ];
 
   if (!plans) plans = defaultPlans;
@@ -112,25 +140,25 @@ export default ({
           {subheading && <Subheading>{subheading}</Subheading>}
           <Heading>{heading}</Heading>
           {description && <Description>{description}</Description>}
-        <PlanDurationSwitcher>
-          {planDurations.map((planDuration, index) => (
-            <SwitchButton active={activeDurationIndex === index} key={index} onClick={() => setActiveDurationIndex(index)}>{planDuration.switcherText}</SwitchButton>
-          ))}
-        </PlanDurationSwitcher>
+          <PlanDurationSwitcher>
+            {/* <SwitchButton>Our Plans</SwitchButton> */}
+          </PlanDurationSwitcher>
         </HeaderContainer>
         <PlansContainer>
           {plans.map((plan, index) => (
             <Plan key={index} featured={plan.featured}>
               <PlanHeader>
                 <span className="priceAndDuration">
-                  <span className="price">{plan.durationPrices[activeDurationIndex]}</span>
+                  <span className="price">
+                    {plan.durationPrices[activeDurationIndex]}
+                  </span>
                   <span className="slash"> / </span>
-                  <span className="duration">{planDurations[activeDurationIndex].text}</span>
+                  <span className="duration">{planDurations[index].text}</span>
                 </span>
                 <span className="name">{plan.name}</span>
-                <span className="mainFeature">{plan.mainFeature}</span>
+                <span className="mainFeature px-6">{plan.mainFeature}</span>
               </PlanHeader>
-              <PlanFeatures>
+              <PlanFeatures className="">
                 {plan.features.map((feature, index) => (
                   <span key={index} className="feature">
                     {feature}

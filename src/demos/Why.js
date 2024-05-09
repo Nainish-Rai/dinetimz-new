@@ -2,8 +2,9 @@ import React from "react";
 import tw from "twin.macro";
 import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
-import Hero from "components/hero/TwoColumnWithVideo.js";
+import Hero from "components/hero/TwoColumnWithInput.js";
 import MainFeature from "components/features/TwoColWithButton.js";
+import { benefitsArray } from "data.js";
 
 import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
 import DownloadApp from "components/cta/DownloadApp.js";
@@ -17,6 +18,7 @@ import {
   TypewriterEffectSmooth,
 } from "components/custom/TypeWriter";
 import { TypewriterEffectSmoothDemo } from "components/custom/TypeWriterContainer";
+import { WordPullUp } from "components/WordPullUp";
 
 export default () => {
   const Subheading = tw.span`tracking-wider text-sm font-medium`;
@@ -33,14 +35,23 @@ export default () => {
           </>
         }
         description="At Dinetimz, we dream of a world where every meal feels like a new adventure. We want to break the routine of eating the same thing every day. Our goal is to bring people together through diverse and exciting flavors, making dining a fun and memorable experience for everyone. Imagine a future where every bite is a discovery, and variety is the spice of life"
-        imageSrc="/hero.webp"
+        imageSrc="/benefits.svg"
         imageCss={imageCss}
         imageDecoratorBlob={true}
         primaryButtonText="Subscribe Us"
         watchVideoButtonText="Explore"
       />
 
-      <HeroScrollDemo />
+      {/* <HeroScrollDemo /> */}
+      <div className="max-w-7xl w-full mx-auto">
+        {benefitsArray.map((benefit) => (
+          <div>
+            <WordPullUp words={benefit.title} />
+
+            <p className="my-4 font-medium text-lg max-w-5xl">{benefit.text}</p>
+          </div>
+        ))}
+      </div>
       <MainFeature
         subheading={<Subheading>Established Since 2024</Subheading>}
         heading={

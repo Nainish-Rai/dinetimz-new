@@ -78,16 +78,10 @@ export default ({
    */
   const defaultLinks = [
     <NavLinks key={1}>
-      <NavLink href="/#">About</NavLink>
-      <NavLink href="/#">Blog</NavLink>
-      <NavLink href="/#">Pricing</NavLink>
-      <NavLink href="/#">Contact Us</NavLink>
-      <NavLink href="/#" tw="lg:ml-12!">
-        Login
-      </NavLink>
-      <PrimaryLink css={roundedHeaderButton && tw`rounded-full`} href="/#">
-        Sign Up
-      </PrimaryLink>
+      <NavLink href="/why">Why Dinetimz</NavLink>
+      <NavLink href="/components/innerPages/PricingPage">Plan</NavLink>
+      <NavLink href="/components/innerPages/AboutUsPage">About Us</NavLink>
+      <NavLink href="/components/innerPages/ContactUsPage">Contact Us</NavLink>
     </NavLinks>,
   ];
 

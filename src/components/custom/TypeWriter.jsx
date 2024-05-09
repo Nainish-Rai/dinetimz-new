@@ -103,11 +103,25 @@ export const TypewriterEffect = ({ className, cursorClassName }) => {
   );
 };
 
-export const TypewriterEffectSmooth = ({
-  words,
-  className,
-  cursorClassName,
-}) => {
+export const TypewriterEffectSmooth = ({ className, cursorClassName }) => {
+  const words = [
+    {
+      text: "Build",
+    },
+    {
+      text: "awesome",
+    },
+    {
+      text: "apps",
+    },
+    {
+      text: "with",
+    },
+    {
+      text: "Aceternity.",
+      className: "text-blue-500 dark:text-blue-500",
+    },
+  ];
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
     return {

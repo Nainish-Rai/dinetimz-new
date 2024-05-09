@@ -53,24 +53,23 @@ export default ({ roundedHeaderButton }) => {
         <TwoColumn>
           <LeftColumn>
             <Heading>
-              Beautiful React Templates <span tw="text-primary-500">for you.</span>
+              Benefits to the students{" "}
+              <span tw="text-primary-500">for you.</span>
             </Heading>
             <Paragraph>
-              Our templates are easy to setup, understand and customize. Fully modular components with a variety of
-              pages and components.
+              At Dinetimz, our focus is not only on providing a variety of
+              dining options but also on ensuring that each meal is prepared and
+              delivered with the utmost care, meeting the highest standards of
+              hygiene and safety for our valued subscribers.
             </Paragraph>
-            <Actions>
-              <input type="text" placeholder="Your E-mail Address" />
-              <button>Get Started</button>
-            </Actions>
-            <CustomersLogoStrip>
-              <p>Our TRUSTED Customers</p>
-              <img src={CustomersLogoStripImage} alt="Our Customers" />
-            </CustomersLogoStrip>
           </LeftColumn>
           <RightColumn>
             <IllustrationContainer>
-              <img tw="min-w-0 w-full max-w-lg xl:max-w-3xl" src={DesignIllustration} alt="Design Illustration" />
+              <img
+                tw="min-w-0 w-full max-w-lg xl:max-w-3xl"
+                src={"/benefits.svg"}
+                alt="Design Illustration"
+              />
             </IllustrationContainer>
           </RightColumn>
         </TwoColumn>
