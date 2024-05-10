@@ -88,7 +88,7 @@ export default () => {
         }
         buttonRounded={false}
         textOnLeft={true}
-        imageSrc={"/img2.jpg"}
+        imageSrc={"/img3.jpg"}
         imageCss={imageCss}
         imageDecoratorBlob={true}
         imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
@@ -167,10 +167,10 @@ export default () => {
             variety is the spice of life!"
           </Description>
         }
-        primaryButtonText="Order Now"
+        // primaryButtonText="Order Now"
         primaryButtonUrl="https://order.now.com"
         imageInsideDiv={false}
-        imageSrc="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEzNzI2fQ&auto=format&fit=crop&w=768&q=80"
+        imageSrc="/img2.jpg"
         imageCss={Object.assign(tw`bg-cover`, imageCss)}
         imageContainerCss={tw`md:w-1/2 h-auto`}
         imageDecoratorBlob={true}

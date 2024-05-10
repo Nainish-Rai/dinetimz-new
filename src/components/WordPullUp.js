@@ -21,7 +21,7 @@ export function WordPullUp({ words }) {
       variants={container}
       initial="hidden"
       whileInView={"show"}
-      className="text-left text-[#c37b7b] font-display text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-5xl md:leading-[5rem]"
+      className="text-center text-[#c37b7b] font-display text-4xl font-bold tracking-[-0.02em] drop-shadow-sm md:text-5xl md:leading-[5rem]"
     >
       {words.split(" ").map((word, i) => (
         <motion.span

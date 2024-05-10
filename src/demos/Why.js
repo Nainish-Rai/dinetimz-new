@@ -4,7 +4,7 @@ import { css } from "styled-components/macro"; //eslint-disable-line
 import AnimationRevealPage from "helpers/AnimationRevealPage.js";
 import Hero from "components/hero/TwoColumnWithInput.js";
 import MainFeature from "components/features/TwoColWithButton.js";
-import { benefitsArray } from "data.js";
+import { benefitsArray, messProviderBenefitsArray } from "data.js";
 
 import Testimonial from "components/testimonials/ThreeColumnWithProfileImage.js";
 import DownloadApp from "components/cta/DownloadApp.js";
@@ -19,6 +19,7 @@ import {
 } from "components/custom/TypeWriter";
 import { TypewriterEffectSmoothDemo } from "components/custom/TypeWriterContainer";
 import { WordPullUp } from "components/WordPullUp";
+import MessBenefits from "components/hero/MessBenefits";
 
 export default () => {
   const Subheading = tw.span`tracking-wider text-sm font-medium`;
@@ -43,67 +44,34 @@ export default () => {
       />
 
       {/* <HeroScrollDemo /> */}
-      <div className="max-w-7xl w-full mx-auto">
+      <div className="max-w-7xl flex flex-col items-center w-full mx-auto">
         {benefitsArray.map((benefit) => (
           <div>
             <WordPullUp words={benefit.title} />
 
-            <p className="my-4 font-medium text-lg max-w-5xl">{benefit.text}</p>
+            <p className="my-4 text-center font-medium text-lg max-w-5xl">
+              {benefit.text}
+            </p>
           </div>
         ))}
       </div>
-      <MainFeature
-        subheading={<Subheading>Established Since 2024</Subheading>}
-        heading={
-          <>
-            Problems
-            <wbr /> <HighlightedText>We Solve</HighlightedText>
-          </>
-        }
-        description={
-          <Description>
-            In cities like Indore, students from nearby towns often encounter a
-            challenge with mess dining. They are required to pay in advance for
-            a month-long mess subscription, limiting their options to a single
-            dining place. As time passes, they become fatigued by the repetitive
-            meals, longing for variety and flexibility in their dining choices
-          </Description>
-        }
-        buttonRounded={false}
-        textOnLeft={false}
-        imageSrc={"/hero.jpg"}
-        imageCss={imageCss}
-        imageDecoratorBlob={true}
-        imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
-      />
+
+      <MessBenefits />
+
       {/* <TypewriterEffectSmoothDemo /> */}
-      <MainFeature
-        subheading={<Subheading></Subheading>}
-        heading={
-          <>
-            Solutions
-            <wbr /> <HighlightedText>We Developed</HighlightedText>
-          </>
-        }
-        description={
-          <Description>
-            We have developed a DINETIMZ application that serves as an
-            aggregator for mess facilities in the area. Through our application,
-            students can subscribe and gain access to a network of associated
-            messes. By simply scanning our preinstalled QR code, students are
-            empowered to choose their meals from any participating mess. This
-            solution not only provides them with the freedom to dine at various
-            places but also eliminates the monotony of having the
-            same meal every day.
-          </Description>
-        }
-        buttonRounded={false}
-        textOnLeft={true}
-        imageSrc={"/img2.jpg"}
-        imageCss={imageCss}
-        imageDecoratorBlob={true}
-        imageDecoratorBlobCss={tw`left-1/2 -translate-x-1/2 md:w-32 md:h-32 opacity-25`}
-      />
+      {/* <HeroScrollDemo /> */}
+      <div className="max-w-7xl flex flex-col items-center w-full mx-auto">
+        {messProviderBenefitsArray.map((benefit) => (
+          <div>
+            <WordPullUp words={benefit.title} />
+
+            <p className="my-4 text-center font-medium text-lg max-w-5xl">
+              {benefit.text}
+            </p>
+          </div>
+        ))}
+      </div>
+
       {/* <MainFeature
         subheading={<Subheading></Subheading>}
         heading={
@@ -178,7 +146,7 @@ export default () => {
             variety is the spice of life!"
           </Description>
         }
-        primaryButtonText="Order Now"
+        // primaryButtonText="Order Now"
         primaryButtonUrl="https://order.now.com"
         imageInsideDiv={false}
         imageSrc="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEzNzI2fQ&auto=format&fit=crop&w=768&q=80"
