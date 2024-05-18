@@ -54,7 +54,7 @@ export default ({
     {
       imageSrc: "/team1.png",
       position: "Co-Founder",
-      name: "Idrees",
+      name: "IDREES ALI JABALPUR WALA",
       links: [
         {
           url: "https://twitter.com",
@@ -71,9 +71,9 @@ export default ({
       ],
     },
     {
-      imageSrc: "/team1.png",
+      imageSrc: "/team2.jpg",
       position: "Co-Founder",
-      name: "Idrees",
+      name: "TAHER ALI JABALPUR WALA",
       links: [
         {
           url: "https://twitter.com",
