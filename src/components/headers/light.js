@@ -80,6 +80,7 @@ export default ({
     <NavLinks key={1}>
       <NavLink href="/why">Why Dinetimz</NavLink>
       <NavLink href="/components/innerPages/PricingPage">Plan</NavLink>
+      <NavLink href="/faqs">FAQs</NavLink>
       <NavLink href="/components/innerPages/AboutUsPage">About Us</NavLink>
       <NavLink href="/components/innerPages/ContactUsPage">Contact Us</NavLink>
     </NavLinks>,
