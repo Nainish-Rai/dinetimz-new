@@ -125,6 +125,10 @@ export default ({
       answer:
         "Yes, Dinetimz may offer a referral program that allows you to refer friends and earn rewards or discounts for successful referrals. Check the app or website for details on ongoing promotions.",
     },
+    {
+      question: "15. How to delete account?",
+      answer: "Delete account option is in the profile page.",
+    },
   ],
 }) => {
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);

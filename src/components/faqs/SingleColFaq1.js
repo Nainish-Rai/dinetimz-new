@@ -116,6 +116,10 @@ export default ({
       answer:
         "In case a student encounters any issues with their order, they can contact Dinetimz customer support, who will connect with you to resolve the problem promptly.",
     },
+    {
+      question: "13. How to delete account?",
+      answer: "Delete account option is in the profile page.",
+    },
   ],
 }) => {
   const [activeQuestionIndex, setActiveQuestionIndex] = useState(null);
